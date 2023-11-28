@@ -20,7 +20,7 @@ class withoutTransformation(nn.Module):
     def __init__(self, in_features, out_features):
         super(withoutTransformation, self).__init__()
     
-  def forward(self, x):
+    def forward(self, x):
         return x
 
 #Defines a linear transformation layer
