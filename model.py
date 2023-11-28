@@ -151,7 +151,7 @@ class Server:
                 global_dict[adjusted_key] = torch.stack([client_models[i][k] for i in range(len(client_models))], 0).mean(0)
         self.global_model.load_state_dict(global_dict)
 
-#Runs the model. 
+#Initiates the Server, defines the clients and trains the Federated Learning model.
 eps = 0.1
 trans = "TanhTransformation"
 federated_rounds = 10
